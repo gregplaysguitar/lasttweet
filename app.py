@@ -45,6 +45,7 @@ def get_timeline(username):
         raise
 
 
+@cache.cached(timeout=60 * 15)
 @app.route('/<username>')
 def fetch(username):
     if not re.search('^[\w\d_]+$', username):
@@ -58,7 +59,9 @@ def fetch(username):
 
     # return first status, excluding retweets and replies
     for status in statuses:
-        if not status['retweeted'] and not status['in_reply_to_status_id']:
+        if not status['retweeted'] and not status['in_reply_to_status_id'] \
+                and not status['text'].startswith('RT @') \
+                and not status['text'].startswith('@'):
             return jsonify(status)
 
     # no valid statuses found
