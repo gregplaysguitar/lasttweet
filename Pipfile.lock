@@ -1,0 +1,65 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "932a819cd9d260b08dba49c1b34b059f6baef1a0736f68a4c9068bb4849dd6e2"
+        },
+        "requires": {},
+        "sources": [
+            {
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "certifi": {
+            "version": "==2017.4.17"
+        },
+        "chardet": {
+            "version": "==3.0.3"
+        },
+        "click": {
+            "version": "==6.7"
+        },
+        "flask": {
+            "version": "==0.12.2"
+        },
+        "flask-cache": {
+            "version": "==0.13.1"
+        },
+        "idna": {
+            "version": "==2.5"
+        },
+        "itsdangerous": {
+            "version": "==0.24"
+        },
+        "jinja2": {
+            "version": "==2.9.6"
+        },
+        "markupsafe": {
+            "version": "==1.0"
+        },
+        "oauthlib": {
+            "version": "==2.0.2"
+        },
+        "requests": {
+            "version": "==2.16.5"
+        },
+        "requests-oauthlib": {
+            "version": "==0.8.0"
+        },
+        "six": {
+            "version": "==1.10.0"
+        },
+        "tweepy": {
+            "version": "==3.5.0"
+        },
+        "urllib3": {
+            "version": "==1.21.1"
+        },
+        "werkzeug": {
+            "version": "==0.12.2"
+        }
+    },
+    "develop": {}
+}
