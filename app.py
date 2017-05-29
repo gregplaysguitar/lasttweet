@@ -45,7 +45,6 @@ def get_timeline(username):
         raise
 
 
-@cache.cached(timeout=60 * 15)
 @app.route('/<username>')
 def fetch(username):
     if not re.search('^[\w\d_]+$', username):
@@ -66,6 +65,13 @@ def fetch(username):
 
     # no valid statuses found
     abort(404)
+
+
+@app.after_request
+def add_header(response):
+    response.cache_control.public = True
+    response.cache_control.max_age = 60 * 15
+    return response
 
 
 if __name__ == "__main__":
